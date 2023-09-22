@@ -1,4 +1,4 @@
-def solucao(arg)
+def string_converter(arg)
   result = ""
 
   arg.each do |hash|
@@ -18,4 +18,4 @@ input = [
   { name: 'Ricardo Fontes', cpf: '44010762900', state: 'Rio Grande do Sul', value: '567' }
 ]
 
-puts solucao(input)
+puts string_converter(input)
