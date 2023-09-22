@@ -1,7 +1,8 @@
 require 'yaml'
 
 def load_format_config
-  YAML.load_file('format.yaml')
+  config_file = File.join(__dir__, 'format.yaml')
+  YAML.load_file(config_file)
 end
 
 def solucao(arg)
