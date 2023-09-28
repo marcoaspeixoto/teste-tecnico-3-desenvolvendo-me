@@ -5,7 +5,7 @@ def load_format_config
   YAML.load_file(config_file)
 end
 
-def solucao(arg)
+def configure_string(arg)
   config = load_format_config
   result = ""
 
@@ -42,4 +42,4 @@ input = [
     value: '567' }
 ]
 
-puts solucao(input)
+puts configure_string(input)

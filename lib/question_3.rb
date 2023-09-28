@@ -6,7 +6,7 @@ def load_format_config(config_file = 'format-1.yaml')
 end
 
 # Esta função converte uma string formatada em um hash com base nas configurações do arquivo YAML.
-def solucao(string)
+def convert_to_hash(string)
   config = load_format_config
   result = {}
 
@@ -32,5 +32,5 @@ def solucao(string)
 end
 
 # Exemplos de uso
-puts solucao("97905796671Maria Neusa de00001234")
-puts solucao("44010762900Ricardo Fontes00000567")
+puts convert_to_hash("97905796671Maria Neusa de00001234")
+puts convert_to_hash("44010762900Ricardo Fontes00000567")

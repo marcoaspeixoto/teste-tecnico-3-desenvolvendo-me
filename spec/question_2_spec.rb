@@ -1,7 +1,6 @@
-require 'yaml'
 require_relative '../lib/question_2'
 
-RSpec.describe 'solucao' do
+RSpec.describe 'question 2' do
 
   it 'deve formatar corretamente os dados de entrada' do
     input = [
@@ -11,13 +10,13 @@ RSpec.describe 'solucao' do
 
     expected_output = "Maria Neusa de97905796671Sao Paulo     00001234\nRicardo Fontes44010762900Rio Grande do 00000567\n"
 
-    expect(solucao(input)).to eq(expected_output)
+    expect(configure_string(input)).to eq(expected_output)
   end
 
   it 'deve funcionar corretamente com uma lista de hashes vazia' do
     input = []
 
-    expect(solucao(input)).to eq('')
+    expect(configure_string(input)).to eq('')
   end
 
   it 'deve formatar corretamente com configurações diferentes' do
@@ -29,6 +28,6 @@ RSpec.describe 'solucao' do
 
     custom_expected_output = "Alice         12345678900New York      00000999\nBob           98765432100California    00012345\n"
 
-    expect(solucao(custom_input)).to eq(custom_expected_output)
+    expect(configure_string(custom_input)).to eq(custom_expected_output)
   end
 end
